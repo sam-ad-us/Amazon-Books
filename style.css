@@ -275,4 +275,83 @@ footer {
     .modal-content h2 {
         font-size: 1.3rem;
     }
+}
+
+/* Newton Section Styles */
+#newton-hero {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.newton-container {
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 900px) {
+    .newton-container {
+        flex-direction: column-reverse !important;
+    }
+}
+
+#newton-hero .hero-image {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    margin-top: 0;
+}
+
+#newton-hero .hero-image img {
+    max-width: 75%;
+    min-width: 220px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    margin-top: 0;
+}
+
+#newton-hero .hero-text {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#newton-hero .features-grid {
+    margin-top: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+#newton-hero .feature-item {
+    background: var(--light-grey);
+    border-left: 4px solid var(--amazon-orange);
+    border-radius: 8px;
+    margin-bottom: 0;
+}
+
+.newton-header-row {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 18px;
+}
+
+.newton-heading-text h2 {
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.newton-heading-text .price {
+    text-align: left;
+}
+
+@media (max-width: 700px) {
+    .newton-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .newton-heading-text h2, .newton-heading-text .price {
+        text-align: left;
+    }
+    #newton-hero .hero-image img {
+        max-width: 90vw;
+    }
 } 
