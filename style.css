@@ -217,4 +217,62 @@ footer {
 @keyframes slideInFromLeft {
     from { transform: translateX(-50px); opacity: 0; }
     to { transform: translateX(0); opacity: 1; }
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background: rgba(0,0,0,0.45);
+    animation: modalFadeIn 0.3s;
+}
+
+.modal-content {
+    background: #fff;
+    margin: 60px auto;
+    padding: 30px 24px 24px 24px;
+    border-radius: 10px;
+    max-width: 540px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    position: relative;
+    animation: modalContentIn 0.4s;
+}
+
+.close-modal {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    font-size: 2rem;
+    color: var(--dark-grey);
+    cursor: pointer;
+    font-weight: 700;
+    transition: color 0.2s;
+}
+.close-modal:hover {
+    color: var(--amazon-orange);
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes modalContentIn {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 600px) {
+    .modal-content {
+        max-width: 95vw;
+        padding: 18px 6vw 18px 6vw;
+    }
+    .modal-content h2 {
+        font-size: 1.3rem;
+    }
 } 
