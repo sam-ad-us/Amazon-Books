@@ -40,4 +40,19 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-}); 
+});
+
+// Google Ads Conversion Tracking on Button Click
+function trackConversion(url) {
+    if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17202941111/2_M3CK3ihN8aELeZgItA',
+            'event_callback': function() {
+                window.open(url, '_blank');
+            }
+        });
+    } else {
+        window.open(url, '_blank');
+    }
+    return false;
+} 
